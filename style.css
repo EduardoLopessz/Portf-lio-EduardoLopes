@@ -1,0 +1,88 @@
+/* variáveis de cor e fonte, pra não ficar repetindo valor em tudo quanto é lugar */
+:root {
+    --ink: #0F1923;
+    --ink-2: #0B1119;
+    --panel: #1B2530;
+    --panel-2: #141C25;
+    --line: #2B3641;
+    --line-soft: #1F2932;
+    --red: #FF4655;
+    --ice: #ECE8E1;
+    --mute: #7C8994;
+    --gold: #F0B90B;
+
+    --font-display: 'Oswald', 'Segoe UI', sans-serif;
+    --font-body: 'Inter', 'Segoe UI', sans-serif;
+    --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+
+    color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--ice);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+dl {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+dd {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+::selection {
+    background: var(--red);
+    color: #1a060a;
+}
+
+:focus-visible {
+    outline: 2px solid var(--red);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
