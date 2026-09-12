@@ -236,3 +236,123 @@ button {
     text-transform: uppercase;
     letter-spacing: 0.06em;
 }
+
+/* underline que "cresce" quando a aba fica ativa */
+.tab::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--red);
+    clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+    transition: width .2s ease;
+}
+
+.tab:hover {
+    color: var(--ice);
+}
+
+.tab:hover .tab__icon {
+    transform: scale(1.22);
+}
+
+.tab.is-active {
+    color: var(--ice);
+}
+
+.tab.is-active::after {
+    width: 100%;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--ice);
+    padding: 5px 10px;
+    background: var(--panel-2);
+    border: 1px solid var(--line);
+    clip-path: polygon(6px 0, 100% 0, 100% 100%, 0 100%, 0 6px);
+    transition: border-color .15s ease;
+}
+
+.stat:hover {
+    border-color: rgba(255, 70, 85, 0.45);
+}
+
+.stat__icon {
+    font-size: 0.9rem;
+    display: inline-block;
+    transition: transform .2s ease;
+}
+
+.stat:hover .stat__icon {
+    transform: scale(1.3);
+}
+
+.gear {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--mute);
+    border: 1px solid var(--line);
+    clip-path: polygon(6px 0, 100% 0, 100% 100%, 0 100%, 0 6px);
+    transition: color .15s ease, border-color .15s ease;
+}
+
+.gear svg {
+    width: 17px;
+    height: 17px;
+    transition: transform .3s ease;
+}
+
+.gear:hover {
+    color: var(--red);
+    border-color: var(--red);
+}
+
+.gear:hover svg {
+    transform: scale(1.2) rotate(45deg);
+}
+
+@media (max-width: 980px) {
+    .tabs {
+        position: static;
+        transform: none;
+    }
+
+    .topbar {
+        flex-wrap: wrap;
+    }
+
+    .topbar__side--left {
+        order: 3;
+        width: 100%;
+    }
+
+    .stat:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .tab span {
+        display: none;
+    }
+
+    .tab {
+        padding: 6px 10px 10px;
+    }
+
+    .stat {
+        display: none;
+    }
+}
+
