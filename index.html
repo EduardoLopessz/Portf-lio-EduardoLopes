@@ -10,7 +10,84 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    
+    <!-- Tela de Carregamento tipo no Valorant (Boot) -->
+    <div class="boot" id="boot" aria-hidden="true">
+        <div class="boot__mark">EDUARDO<span>.Lopes</span></div>
+        <div class="boot__bar"><div class="boot__fill"></div></div>
+        <p class="boot__hint">entrando no lobby...</p>
+    </div>
+
+    <div class="lobby" id="lobby">
+        <!-- conteúdo do lobby aqui -->
+    </div>
+
+    <!-- Top do Site -->
+    <header class="topbar">
+        <div class="topbar__side topbar__side--left">
+            <span class="crumb">VOLTAR <span class="crumb__sep">//</span> <span id="crumbLabel">INÍCIO</span></span>
+        </div>
+
+        <nav class="tabs" id="tabs" aria-label="Navegação principal">
+            <button class="tab is-active" data-tab="inicio" aria-current="page">
+                <svg viewBox="0 0 24 24" class="tab__icon">
+                    <path d="M4 11.5 12 4l8 7.5M6 10v9h5v-5h2v5h5v-9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                </svg>
+                <span>início</span>
+            </button>
+
+            <button class="tab" data-tab="projetos">
+                <svg viewBox="0 0 24 24" class="tab__icon">
+                    <rect x="4" y="4" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                    <rect x="13" y="4" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                    <rect x="4" y="13" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                    <rect x="13" y="13" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+                <span>projetos</span>
+            </button>
+
+            <button class="tab" data-tab="carreira">
+                <svg viewBox="0 0 24 24" class="tab__icon">
+                    <path d="M4 20 10 8l4 6 3-5 3 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+                </svg>
+                <span>carreira</span>
+            </button>
+
+            <button class="tab" data-tab="criacoes">
+                <svg viewBox="0 0 24 24" class="tab__icon">
+                    <path d="M9 7v10l8-5-8-5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                </svg>
+                <span>criações</span>
+            </button>
+
+            <button class="tab" data-tab="sobre">
+                <svg viewBox="0 0 24 24" class="tab__icon">
+                    <circle cx="12" cy="8.5" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M5 20c1.4-4 4.2-6 7-6s5.6 2 7 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                <span>sobre</span>
+            </button>
+        </nav>
+
+        <div class="topbar__side topbar__side--right">
+            <div class="stat" title="cafés que já me mantiveram de pé">
+                <span class="stat__icon">☕</span><span class="stat__value">514</span>
+            </div>
+            <div class="stat" title="projetos publicados no GitHub">
+                <span class="stat__icon">💻</span><span class="stat__value">5</span>
+            </div>
+            <div class="stat" title="faixas lançadas no Spotify">
+                <span class="stat__icon">🎧</span><span class="stat__value">4</span>
+            </div>
+            <button class="gear" id="gearBtn" aria-label="Sobre este site" title="Sobre este site">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M19.4 13.5c.05-.5.05-1 0-1.5l1.9-1.4-2-3.4-2.2.9c-.4-.3-.8-.6-1.3-.8L15.5 5h-4l-.3 2.3c-.5.2-.9.5-1.3.8l-2.2-.9-2 3.4L7.6 12c-.05.5-.05 1 0 1.5l-1.9 1.4 2 3.4 2.2-.9c.4.3.8.6 1.3.8l.3 2.3h4l.3-2.3c.5-.2.9-.5 1.3-.8l2.2.9 2-3.4-1.9-1.4Z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
 </body>
 </html>
