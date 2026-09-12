@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eduardo Lopes - Portfólio</title>
-    <meta name="descrição" content="Portfólio de Eduardo Lopes, front-end dev em formação - apresentado como o lobby de uma partida.">
+    <meta name="description" content="Portfólio de Eduardo Lopes, front-end dev em formação - apresentado como o lobby de uma partida.">
     <link rel="icon" href="data: ,">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +17,6 @@
         <div class="boot__mark">EDUARDO<span>.Lopes</span></div>
         <div class="boot__bar"><div class="boot__fill"></div></div>
         <p class="boot__hint">entrando no lobby...</p>
-    </div>
-
-    <div class="lobby" id="lobby">
-        <!-- conteúdo do lobby aqui -->
     </div>
 
     <!-- Top do Site -->
@@ -89,5 +85,287 @@
         </div>
     </header>
 
+
+    <!--Faixa abaixo do Top-->
+        <div class="promo" id="promo">
+            <span class="promo__badge">EM ANDAMENTO</span>
+            <span class="promo__text" id="promoText">candidato à Apple Developer Academy PUCPR</span>
+        </div>
+
+        <main class="viewport">
+
+     <!-- ---------- ABA INÍCIO ---------- -->
+    <section class="screen is-active" id="inicio" data-screen>
+        <div class="duo">
+
+          <article class="agent-card">
+            <span class="agent-card__badge">LVL 21</span>
+            <div class="agent-card__art agent-card__art--photo">
+              <img src="foto-eduardo.jpg" alt="Eduardo Lopes">
+            </div>
+            <div class="agent-card__plate">
+              <h1 class="agent-card__name">Eduardo Lopes</h1>
+              <p class="agent-card__role">front-end dev em formação</p>
+            </div>
+            <div class="agent-card__status">
+              <span class="dot dot--live"></span> disponível para novas oportunidades
+            </div>
+          </article>
+
+          <article class="agent-card agent-card--gold">
+            <span class="agent-card__badge">AO VIVO</span>
+            <div class="agent-card__art agent-card__art--hud">
+              <div class="hud">
+                <div class="hud__row"><span>jogador</span><strong>Eduardo Lopes</strong></div>
+                <div class="hud__row"><span>status</span><strong class="hud__status" id="hudStatus">jogando Valorant</strong></div>
+                <div class="hud__row"><span>rota</span><strong>estudante · front-end</strong></div>
+                <div class="hud__divider"></div>
+                <div class="hud__tags">
+                  <span class="chip chip--red">valorant</span>
+                  <span class="chip chip--red">cs</span>
+                  <span class="chip chip--red">fortnite</span>
+                  <span class="chip chip--gold">one piece</span>
+                  <span class="chip chip--gold">naruto</span>
+                  <span class="chip chip--ice">spotify</span>
+                </div>
+              </div>
+            </div>
+            <div class="agent-card__plate">
+              <h2 class="agent-card__name">status.log</h2>
+              <p class="agent-card__role">o que anda ocupando minha cabeça</p>
+            </div>
+          </article>
+
+          <article class="agent-card agent-card--empty" tabindex="0" data-tab-jump="projetos">
+            <span class="agent-card__plus">+</span>
+            <p>ver projetos</p>
+          </article>
+
+          <article class="agent-card agent-card--empty" tabindex="0" data-tab-jump="sobre">
+            <span class="agent-card__plus">+</span>
+            <p>minha história</p>
+          </article>
+
+        </div>
+      </section>
+      <!-- ---------- ABA PROJETOS ---------- -->
+      <section class="screen" id="projetos" data-screen>
+        <div class="screen__head">
+          <h2 class="screen__title">Coleção de projetos</h2>
+          <p class="screen__lead">Puxados direto do meu <a href="https://github.com/EduardoLopessz" target="_blank" rel="noopener">GitHub</a>. Alguns são estudos, outros ideias que virei código — todos pra aprender fazendo.</p>
+        </div>
+
+        <div class="grid grid--projects">
+
+          <article class="loadout-card">
+            <div class="loadout-card__top">
+              <span class="pill pill--gold">HTML/CSS</span>
+              <a href="https://github.com/EduardoLopessz/smartgram" target="_blank" rel="noopener" class="loadout-card__link" aria-label="Ver repositório smartgram">↗</a>
+            </div>
+            <span class="pill pill--tag">pessoal</span>
+            <h3 class="loadout-card__title">smartgram</h3>
+            <p class="loadout-card__desc">Clone das telas de login e cadastro do Instagram em HTML e CSS puro — foco em semântica, acessibilidade e responsividade.</p>
+            <dl class="loadout-card__meta">
+              <div><dt>desafio</dt><dd>Criar interfaces responsivas com semântica HTML e acessibilidade.</dd></div>
+              <div><dt>aprendi</dt><dd>Boas práticas de HTML, CSS puro e design responsivo.</dd></div>
+            </dl>
+            <div class="loadout-card__foot"><a href="https://eduardolopessz.github.io/smartgram/" target="_blank" rel="noopener">ver demo ao vivo</a></div>
+          </article>
+
+          <article class="loadout-card">
+            <div class="loadout-card__top">
+              <span class="pill pill--ice">Python</span>
+              <a href="https://github.com/EduardoLopessz/Puc_Fit" target="_blank" rel="noopener" class="loadout-card__link" aria-label="Ver repositório Puc_Fit">↗</a>
+            </div>
+            <span class="pill pill--tag">faculdade</span>
+            <h3 class="loadout-card__title">Puc_Fit</h3>
+            <p class="loadout-card__desc">Sistema em Python para gerenciamento básico de saúde: cálculo de IMC, hidratação, gasto calórico e sugestões de dieta e treino via terminal.</p>
+            <dl class="loadout-card__meta">
+              <div><dt>desafio</dt><dd>Implementar lógica de programação em Python com cálculos de saúde.</dd></div>
+              <div><dt>aprendi</dt><dd>Manipulação de dados, lógica condicional e estrutura de programas em terminal.</dd></div>
+            </dl>
+            <div class="loadout-card__foot"><span class="muted">projeto de terminal</span></div>
+          </article>
+
+          <article class="loadout-card">
+            <div class="loadout-card__top">
+              <span class="pill pill--gold">HTML/CSS</span>
+              <a href="https://github.com/EduardoLopessz/Livraria-Digital-C-c" target="_blank" rel="noopener" class="loadout-card__link" aria-label="Ver repositório Livraria Digital">↗</a>
+            </div>
+            <span class="pill pill--tag">faculdade</span>
+            <h3 class="loadout-card__title">Livraria Digital</h3>
+            <p class="loadout-card__desc">Site em HTML e CSS puro pra disciplina de Desenvolvimento Front-end: páginas de mais vendidos e recomendações, com CSS compartilhado entre as páginas.</p>
+            <dl class="loadout-card__meta">
+              <div><dt>desafio</dt><dd>Montar duas páginas completas em HTML/CSS puro, dividindo tarefas com a equipe.</dd></div>
+              <div><dt>aprendi</dt><dd>Organizar CSS compartilhado entre páginas e manter um layout consistente.</dd></div>
+            </dl>
+            <div class="loadout-card__foot"><span class="muted">projeto de disciplina</span></div>
+          </article>
+
+          <article class="loadout-card">
+            <div class="loadout-card__top">
+              <span class="pill pill--red">HTML/CSS/JS</span>
+              <a href="https://github.com/EduardoLopessz/PucEats" target="_blank" rel="noopener" class="loadout-card__link" aria-label="Ver repositório PucEats">↗</a>
+            </div>
+            <span class="pill pill--tag">faculdade</span>
+            <span class="pill pill--tag">colaborativo</span>
+            <h3 class="loadout-card__title">PucEats</h3>
+            <p class="loadout-card__desc">Delivery pensado pro RU da PUCPR: autenticação, cardápio, acompanhamento de pedidos e notificações. Projeto em equipe de 5 integrantes.</p>
+            <dl class="loadout-card__meta">
+              <div><dt>desafio</dt><dd>Estruturar um fluxo completo — login, cardápio, checkout e notificações — dividindo o trabalho com o time.</dd></div>
+              <div><dt>aprendi</dt><dd>Organizar um projeto em equipe do início à apresentação final.</dd></div>
+              <div><dt>prêmio</dt><dd>Melhor Apresentação da Etapa 1 — PUCPR, maio de 2026.</dd></div>
+            </dl>
+            <div class="loadout-card__foot"><span class="muted">projeto em equipe</span></div>
+          </article>
+
+          <article class="loadout-card loadout-card--empty">
+            <div class="loadout-card__top"><span class="pill pill--tag">em breve</span></div>
+            <h3 class="loadout-card__title">próximo projeto</h3>
+            <p class="loadout-card__desc">Espaço reservado pro próximo projeto que eu subir no GitHub. Sempre tem algo novo em construção.</p>
+            <div class="loadout-card__foot"><span class="muted">a preencher</span></div>
+          </article>
+
+        </div>
+      </section>
+       <!-- ---------- ABA CARREIRA ---------- -->
+      <section class="screen" id="carreira" data-screen>
+        <div class="screen__head">
+          <h2 class="screen__title">Carreira</h2>
+          <p class="screen__lead">Tecnologias que já domino, as que estou treinando agora, e o histórico de cursos que fui completando pelo caminho.</p>
+        </div>
+
+        <div class="career">
+          <div class="career__col">
+            <h3 class="career__col-title">domínio</h3>
+            <div class="rank"><div class="rank__head"><span>HTML5</span><span>90%</span></div><div class="rank__bar"><div class="rank__fill" style="--pct:90%"></div></div></div>
+            <div class="rank"><div class="rank__head"><span>CSS3</span><span>85%</span></div><div class="rank__bar"><div class="rank__fill" style="--pct:85%"></div></div></div>
+            <div class="rank"><div class="rank__head"><span>Python</span><span>50%</span></div><div class="rank__bar"><div class="rank__fill" style="--pct:50%"></div></div></div>
+            <div class="rank"><div class="rank__head"><span>Git &amp; GitHub</span><span>60%</span></div><div class="rank__bar"><div class="rank__fill" style="--pct:60%"></div></div></div>
+
+            <h3 class="career__col-title career__col-title--spaced">treinando agora</h3>
+            <div class="rank"><div class="rank__head"><span>JavaScript</span><span>40%</span></div><div class="rank__bar"><div class="rank__fill" style="--pct:40%"></div></div></div>
+            <div class="rank"><div class="rank__head"><span>Dart &amp; Flutter</span><span>35%</span></div><div class="rank__bar"><div class="rank__fill" style="--pct:35%"></div></div></div>
+            <div class="rank"><div class="rank__head"><span>n8n / automação</span><span>75%</span></div><div class="rank__bar"><div class="rank__fill" style="--pct:75%"></div></div></div>
+            <div class="rank"><div class="rank__head"><span>UI/UX &amp; Figma</span><span>65%</span></div><div class="rank__bar"><div class="rank__fill" style="--pct:65%"></div></div></div>
+            <div class="rank"><div class="rank__head"><span>Docker</span><span>60%</span></div><div class="rank__bar"><div class="rank__fill" style="--pct:60%"></div></div></div>
+
+            <h3 class="career__col-title career__col-title--spaced">loadout</h3>
+            <div class="loadout-icons">
+              <div class="loadout-icon"><img src="https://cdn.simpleicons.org/html5/E34F26" alt=""><span>HTML5</span></div>
+              <div class="loadout-icon"><img src="https://cdn.simpleicons.org/css/1572B6" alt=""><span>CSS3</span></div>
+              <div class="loadout-icon"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt=""><span>JavaScript</span></div>
+              <div class="loadout-icon"><img src="https://cdn.simpleicons.org/python/3776AB" alt=""><span>Python</span></div>
+              <div class="loadout-icon"><img src="https://cdn.simpleicons.org/git/F05032" alt=""><span>Git</span></div>
+              <div class="loadout-icon"><img src="https://cdn.simpleicons.org/github/ECE8E1" alt=""><span>GitHub</span></div>
+              <div class="loadout-icon"><img src="https://cdn.simpleicons.org/dart/0175C2" alt=""><span>Dart</span></div>
+              <div class="loadout-icon"><img src="https://cdn.simpleicons.org/flutter/02569B" alt=""><span>Flutter</span></div>
+              <div class="loadout-icon"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt=""><span>n8n</span></div>
+              <div class="loadout-icon"><img src="https://cdn.simpleicons.org/figma/F24E1E" alt=""><span>Figma</span></div>
+              <div class="loadout-icon"><img src="https://cdn.simpleicons.org/docker/2496ED" alt=""><span>Docker</span></div>
+            </div>
+          </div>
+
+          <div class="career__col">
+            <h3 class="career__col-title">histórico</h3>
+            <ul class="history">
+              <li class="history__row">
+                <span class="history__org">Alura</span>
+                <div><p class="history__title">Model Context Protocol (MCP): otimização de agentes de IA com n8n</p><p class="history__meta">6h · julho de 2026</p></div>
+              </li>
+              <li class="history__row">
+                <span class="history__org">Alura</span>
+                <div><p class="history__title">n8n para devs: construindo workflows inteligentes</p><p class="history__meta">2h · julho de 2026</p></div>
+              </li>
+              <li class="history__row">
+                <span class="history__org">Alura</span>
+                <div><p class="history__title">IA: explorando o potencial da inteligência artificial generativa</p><p class="history__meta">8h · junho de 2026</p></div>
+              </li>
+              <li class="history__row">
+                <span class="history__org">Alura</span>
+                <div><p class="history__title">Produtividade: otimizando sua rotina com inteligência artificial</p><p class="history__meta">6h · junho de 2026</p></div>
+              </li>
+              <li class="history__row">
+                <span class="history__org">Integra CSC</span>
+                <div><p class="history__title">PQI.57 — Solicitações de Equipamentos de TI</p><p class="history__meta">25min · junho de 2026</p></div>
+              </li>
+              <li class="history__row">
+                <span class="history__org">Integra CSC</span>
+                <div><p class="history__title">PQI.54 — Solicitação de suporte T.I</p><p class="history__meta">20min · junho de 2026</p></div>
+              </li>
+              <li class="history__row">
+                <span class="history__org">PROCEMP</span>
+                <div><p class="history__title">Windows 10, Word, Excel, PowerPoint e Internet</p><p class="history__meta">79h · 2018 · média 8,2</p></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ---------- ABA CRIAÇÕES ---------- -->
+      <section class="screen" id="criacoes" data-screen>
+        <div class="screen__head">
+          <h2 class="screen__title">Criações</h2>
+          <p class="screen__lead">O que eu crio fora do código: lives, música e edição de vídeo. Tudo por hobby, sem fins comerciais.</p>
+        </div>
+
+        <div class="grid grid--creations">
+          <article class="contract-card">
+            <div class="contract-card__icon"><img src="https://cdn.simpleicons.org/twitch/9146FF" alt="Twitch"></div>
+            <h3 class="contract-card__title">Twitch</h3>
+            <p class="contract-card__desc">Lives de jogos — Valorant, CS e Fortnite. Comecei e parei em 2024.</p>
+            <a href="https://twitch.tv/edulopessz" target="_blank" rel="noopener" class="contract-card__link">assistir na Twitch ↗</a>
+          </article>
+
+          <article class="contract-card contract-card--gold">
+            <div class="contract-card__icon"><img src="https://cdn.simpleicons.org/spotify/1ED760" alt="Spotify"></div>
+            <h3 class="contract-card__title">Canal de música</h3>
+            <p class="contract-card__desc">Produções musicais próprias, do início ao fim.</p>
+            <ul class="contract-card__stats">
+              <li>álbum <strong>Princípios</strong> — 4 faixas</li>
+              <li>faixa mais acessada: <strong>Correndo Muito</strong> (4.400 plays)</li>
+            </ul>
+            <a href="https://open.spotify.com/artist/00Uk8jkYDtz8cenCwFvD89" target="_blank" rel="noopener" class="contract-card__link">ouvir no Spotify ↗</a>
+          </article>
+
+          <article class="contract-card">
+            <div class="contract-card__icon"><img src="https://cdn.simpleicons.org/tiktok/ECE8E1" alt="TikTok"></div>
+            <h3 class="contract-card__title">TikTok — edits</h3>
+            <p class="contract-card__desc">Edições de músicas brasileiras — ativo de junho a novembro de 2025.</p>
+            <ul class="contract-card__stats">
+              <li>3.260 seguidores</li>
+              <li>604,4 mil curtidas</li>
+              <li>1 vídeo com 1,1 milhão de visualizações</li>
+            </ul>
+            <a href="https://www.tiktok.com/@gmltrap" target="_blank" rel="noopener" class="contract-card__link">ver os edits ↗</a>
+          </article>
+        </div>
+      </section>
+
+
+      <!-- ---------- ABA SOBRE ---------- -->
+      <section class="screen" id="sobre" data-screen>
+        <div class="profile">
+          <div class="profile__photo">
+            <img src="foto-eduardo.jpg" alt="Eduardo Lopes">
+          </div>
+          <div class="profile__text">
+            <h2 class="screen__title">Sobre mim</h2>
+            <p>Sou Eduardo Elias Lopes, estudante de Sistemas de Informação na PUCPR e estagiário em IA na Integra CSC (Grupo Bio Holding), onde trabalho com automação de processos e agentes de IA. Terminei o ensino médio no Colégio SESI Pinhais.</p>
+            <p>Comecei a programar de verdade este ano, construindo o básico primeiro: HTML, CSS e lógica de programação antes de qualquer framework — do mesmo jeito que este próprio site foi feito.</p>
+            <p>Conheci a Apple Developer Academy só na faculdade, e espero aprender muito nesses dois anos: conhecimento técnico, visão de negócio, trabalho em equipe e a chance de transformar ideias em algo real através da tecnologia.</p>
+            <p>Todo projeto no meu GitHub eu domino de verdade. Já as minhas criações — música, TikTok e Twitch — a ideia foi 100% minha, do início ao fim.</p>
+            <div class="profile__contact">
+              <a href="mailto:eduardoelias25.lopes@gmail.com" class="btn btn--ghost">e-mail ↗</a>
+              <a href="https://github.com/EduardoLopessz" target="_blank" rel="noopener" class="btn btn--ghost">github ↗</a>
+              <a href="https://www.linkedin.com/in/eduardo-lopes-7890253b2" target="_blank" rel="noopener" class="btn btn--ghost">linkedin ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
 </body>
 </html>
