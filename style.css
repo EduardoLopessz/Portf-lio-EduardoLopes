@@ -356,3 +356,135 @@ button {
     }
 }
 
+/* faixa abaixo do top */
+.promo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 22px;
+    background: linear-gradient(90deg, rgba(255, 70, 85, 0.14), rgba(240, 185, 11, 0.08));
+    border-bottom: 1px solid var(--line);
+}
+
+.promo__badge {
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--red);
+    padding: 3px 10px;
+    clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+}
+
+.promo__text {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ice);
+}
+
+/* área principal onde cada aba aparece */
+.viewport {
+    flex: 1;
+    padding: 40px 22px 56px;
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.is-active {
+    display: block;
+    animation: screenIn .35s ease both;
+}
+
+@keyframes screenIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.screen__head {
+    max-width: 640px;
+    margin: 0 0 40px;
+}
+
+.screen__title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin: 0 0 12px;
+}
+
+.screen__lead {
+    color: var(--mute);
+    margin: 0;
+}
+
+.screen__lead a {
+    color: var(--red);
+    border-bottom: 1px solid transparent;
+}
+
+.screen__lead a:hover {
+    border-color: var(--red);
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--mute);
+    display: inline-block;
+}
+
+.dot--live {
+    background: var(--gold);
+    box-shadow: 0 0 8px var(--gold);
+    animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .55;
+        transform: scale(0.8);
+    }
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 11px 20px;
+    border: 1px solid var(--line);
+    clip-path: polygon(8px 0, 100% 0, 100% 100%, 0 100%, 0 8px);
+    transition: border-color .15s ease, color .15s ease, transform .15s ease;
+}
+
+.btn--ghost:hover {
+    border-color: var(--red);
+    color: var(--red);
+    transform: translateY(-2px);
+}
