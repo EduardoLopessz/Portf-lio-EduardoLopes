@@ -153,3 +153,86 @@ button {
         display: none;
     }
 }
+
+/* lobby (fundo com aqueles gradientes vermelho/dourado) */
+.lobby {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    background:
+        radial-gradient(1100px 620px at 18% -10%, rgba(255, 70, 85, 0.10), transparent 60%),
+        radial-gradient(900px 700px at 100% 110%, rgba(240, 185, 11, 0.06), transparent 55%),
+        var(--ink);
+}
+
+/* top do site */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 22px;
+    background: var(--ink-2);
+    border-bottom: 1px solid var(--line);
+}
+
+.topbar__side {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-width: 0;
+}
+
+.topbar__side--right {
+    justify-content: flex-end;
+}
+
+.crumb {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--mute);
+    white-space: nowrap;
+}
+
+.crumb__sep {
+    color: var(--red);
+    margin: 0 4px;
+}
+
+#crumbLabel {
+    color: var(--ice);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.tabs {
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 18px 10px;
+    color: var(--mute);
+    position: relative;
+    transition: color .15s ease;
+}
+
+.tab__icon {
+    width: 18px;
+    height: 18px;
+    transition: transform .2s ease;
+}
+
+.tab span {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
