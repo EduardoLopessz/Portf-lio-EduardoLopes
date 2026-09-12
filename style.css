@@ -488,3 +488,209 @@ button {
     color: var(--red);
     transform: translateY(-2px);
 }
+
+/* aba início - os 4 cards tipo "agente" */
+.duo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+@media (max-width: 980px) {
+    .duo {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .duo {
+        grid-template-columns: 1fr;
+    }
+}
+
+.agent-card {
+    position: relative;
+    background: linear-gradient(180deg, var(--panel), var(--panel-2));
+    border: 1px solid var(--line);
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+    padding: 16px 16px 42px;
+    display: flex;
+    flex-direction: column;
+    min-height: 380px;
+}
+
+.agent-card__badge {
+    align-self: center;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--gold);
+    border: 1px solid rgba(240, 185, 11, 0.4);
+    padding: 3px 12px;
+    clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+    margin-bottom: 14px;
+}
+
+.agent-card--gold .agent-card__badge {
+    color: var(--red);
+    border-color: rgba(255, 70, 85, 0.4);
+}
+
+.agent-card__art {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 160px;
+}
+
+.agent-card__art--photo {
+    overflow: hidden;
+}
+
+.agent-card__art--photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(1.05) contrast(1.03);
+    transition: transform .35s ease;
+}
+
+.agent-card:hover .agent-card__art--photo img {
+    transform: scale(1.1);
+}
+
+.agent-card__plate {
+    text-align: center;
+    padding-top: 14px;
+}
+
+.agent-card__name {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin: 0 0 4px;
+}
+
+.agent-card__role {
+    font-size: 0.78rem;
+    color: var(--mute);
+    margin: 0;
+}
+
+.agent-card__status {
+    margin-top: 12px;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--mute);
+}
+
+.agent-card--empty {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    border-style: dashed;
+    color: var(--mute);
+    cursor: pointer;
+    transition: border-color .15s ease, color .15s ease;
+}
+
+.agent-card--empty:hover,
+.agent-card--empty:focus-visible {
+    border-color: var(--red);
+    color: var(--ice);
+}
+
+.agent-card__plus {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.agent-card--empty p {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    text-transform: lowercase;
+}
+
+@media (max-width: 560px) {
+    .agent-card {
+        min-height: 0;
+    }
+
+    .agent-card--empty {
+        min-height: 96px;
+        padding: 20px 16px 34px;
+        clip-path: polygon(0 0, 100% 0, 100% 78%, 50% 100%, 0 78%);
+    }
+}
+
+.hud {
+    width: 100%;
+    padding: 4px;
+}
+
+.hud__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 7px 0;
+    border-bottom: 1px dashed var(--line);
+}
+
+.hud__row span {
+    color: var(--mute);
+    text-transform: lowercase;
+}
+
+.hud__row strong {
+    font-weight: 500;
+    text-align: right;
+    color: var(--ice);
+}
+
+.hud__status {
+    color: var(--red) !important;
+    transition: opacity .3s ease;
+}
+
+.hud__divider {
+    height: 1px;
+    background: var(--line);
+    margin: 12px 0;
+}
+
+.hud__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.chip {
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    padding: 3px 8px;
+    border: 1px solid var(--line);
+    color: var(--mute);
+}
+
+.chip--red {
+    border-color: rgba(255, 70, 85, 0.4);
+    color: var(--red);
+}
+
+.chip--gold {
+    border-color: rgba(240, 185, 11, 0.4);
+    color: var(--gold);
+}
+
+.chip--ice {
+    border-color: rgba(236, 232, 225, 0.3);
+    color: var(--ice);
+}
