@@ -53,3 +53,46 @@ jumpTriggers.forEach(el => {
         }
     });
 });
+
+// seta esquerda/direita troca de aba, tipo menu de jogo
+document.addEventListener('keydown', (e) => {
+    if (document.activeElement && ['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+
+    const activeTab = document.querySelector('.tab.is-active');
+    const current = activeTab ? activeTab.dataset.tab : TAB_ORDER[0];
+    const idx = TAB_ORDER.indexOf(current);
+
+    let nextIdx;
+    if (e.key === 'ArrowRight') {
+        nextIdx = (idx + 1) % TAB_ORDER.length;
+    } else {
+        nextIdx = (idx - 1 + TAB_ORDER.length) % TAB_ORDER.length;
+    }
+
+    goToTab(TAB_ORDER[nextIdx]);
+});
+
+// status que fica trocando no card "status.log"
+const statuses = [
+    'jogando Valorant',
+    'jogando CS',
+    'jogando Fortnite',
+    'ouvindo Spotify',
+    'assistindo One Piece',
+    'assistindo Naruto',
+    'codando um novo projeto',
+];
+let statusIndex = 0;
+const hudStatus = document.getElementById('hudStatus');
+
+if (hudStatus) {
+    setInterval(() => {
+        statusIndex = (statusIndex + 1) % statuses.length;
+        hudStatus.style.opacity = 0;
+        setTimeout(() => {
+            hudStatus.textContent = statuses[statusIndex];
+            hudStatus.style.opacity = 1;
+        }, 250);
+    }, 2600);
+}
