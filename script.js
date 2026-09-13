@@ -54,6 +54,22 @@ jumpTriggers.forEach(el => {
     });
 });
 
+jumpTriggers.forEach(el => {
+    el.addEventListener('click', () => goToTab(el.dataset.tabJump));
+    el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            goToTab(el.dataset.tabJump);
+        }
+    });
+});
+
+// se a URL já vier com #alguma-aba, abre direto nela
+const initialTab = window.location.hash.replace('#', '');
+if (initialTab && TAB_LABELS[initialTab]) {
+    goToTab(initialTab, false);
+}
+
 // seta esquerda/direita troca de aba, tipo menu de jogo
 document.addEventListener('keydown', (e) => {
     if (document.activeElement && ['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
@@ -96,3 +112,53 @@ if (hudStatus) {
         }, 250);
     }, 2600);
 }
+
+// anima as barrinhas de progresso quando abre a aba carreira
+const rankFills = document.querySelectorAll('.rank__fill');
+
+function animateRanks() {
+    rankFills.forEach(fill => fill.classList.add('is-filled'));
+}
+
+const carreiraTab = document.querySelector('.tab[data-tab="carreira"]');
+if (carreiraTab) carreiraTab.addEventListener('click', animateRanks, { once: true });
+if (initialTab === 'carreira') animateRanks();
+
+// modal "sobre este site" (abre pela engrenagem)
+const modal = document.getElementById('modal');
+const gearBtn = document.getElementById('gearBtn');
+const modalClose = document.getElementById('modalClose');
+
+function openModal() {
+    modal.hidden = false;
+}
+function closeModal() {
+    modal.hidden = true;
+}
+
+if (gearBtn) gearBtn.addEventListener('click', openModal);
+if (modalClose) modalClose.addEventListener('click', closeModal);
+if (modal) {
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+}
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && !modal.hidden) closeModal();
+});
+
+// tela de boot: clicar ou apertar qualquer tecla já pula ela
+const boot = document.getElementById('boot');
+if (boot) {
+    const skipBoot = () => {
+        boot.style.transition = 'opacity .2s ease';
+        boot.style.opacity = '0';
+        setTimeout(() => boot.remove(), 200);
+    };
+    boot.addEventListener('click', skipBoot);
+    document.addEventListener('keydown', skipBoot, { once: true });
+    setTimeout(() => {
+        if (boot) boot.remove();
+    }, 2000);
+}
+
