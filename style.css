@@ -585,17 +585,60 @@ button {
     font-family: var(--font-mono);
     font-size: 0.72rem;
     color: var(--mute);
+    min-height: 32px;
 }
 
 .agent-card--empty {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 10px;
-    border-style: dashed;
-    color: var(--mute);
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    border-style: solid;
     cursor: pointer;
-    transition: border-color .15s ease, color .15s ease;
+    transition: border-color .15s ease;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+}
+
+.agent-card__bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(1.05) contrast(1.05) brightness(0.85);
+    transition: transform .35s ease, filter .2s ease;
+}
+
+.agent-card--empty:hover .agent-card__bg,
+.agent-card--empty:focus-visible .agent-card__bg {
+    transform: scale(1.08);
+    filter: saturate(1.15) contrast(1.1) brightness(1);
+}
+
+.agent-card__caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 484px;
+    margin: 0;
+    padding: 16px;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--ice);
+    z-index: 2;
+}
+
+.agent-card--empty::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60%;
+    background: linear-gradient(180deg, transparent, rgba(11, 17, 25, 0.95) 65%);
+    z-index: 1;
+    pointer-events: none;
 }
 
 .agent-card--empty:hover,
@@ -608,13 +651,6 @@ button {
     font-family: var(--font-display);
     font-size: 2rem;
     line-height: 1;
-}
-
-.agent-card--empty p {
-    margin: 0;
-    font-family: var(--font-mono);
-    font-size: 0.76rem;
-    text-transform: lowercase;
 }
 
 @media (max-width: 560px) {
