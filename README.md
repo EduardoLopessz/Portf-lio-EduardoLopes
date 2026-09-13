@@ -2,7 +2,7 @@
 
 Portfólio pessoal com o visual do lobby do Valorant, mostrando quem eu sou, meus projetos, minha trajetória e minhas criações fora do código.
 
-🔗 **Demo ao vivo:** https://eduardolopessz.github.io/Portf-lio-EduardoLopes/
+🔗 **Demo ao vivo:** https://eduardolopessz.github.io/Portf-lio-EduardoLopes/](https://eduardolopessz.github.io/portfolio-eduardolopes/)
 
 ## Sobre o projeto
 
