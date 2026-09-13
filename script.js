@@ -54,16 +54,6 @@ jumpTriggers.forEach(el => {
     });
 });
 
-jumpTriggers.forEach(el => {
-    el.addEventListener('click', () => goToTab(el.dataset.tabJump));
-    el.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            goToTab(el.dataset.tabJump);
-        }
-    });
-});
-
 // se a URL já vier com #alguma-aba, abre direto nela
 const initialTab = window.location.hash.replace('#', '');
 if (initialTab && TAB_LABELS[initialTab]) {
