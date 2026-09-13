@@ -200,9 +200,12 @@ button {
 }
 
 #crumbLabel {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.85rem;
     color: var(--ice);
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
 }
 
 .tabs {
