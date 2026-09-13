@@ -29,5 +29,5 @@ HTML e CSS eu domino de verdade — é onde entendo o que está acontecendo em c
 ## Como rodar localmente
 
 ```bash
-git clone https://github.com/EduardoLopessz/Portf-lio-EduardoLopes.git
-cd Portf-lio-EduardoLopes
+git clone https://github.com/EduardoLopessz/portfolio-eduardolopes.git
+cd portfolio-eduardolopes
